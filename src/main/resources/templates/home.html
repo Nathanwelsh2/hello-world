@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Home Page</title></head>
+<body>
+<h1>Hello !</h1>
+<p>Welcome to <span th:text="${appName}">Our App</span></p>
+<h2>Files</h2>
+<p th:each="file : ${files}"
+   th:text="${file}"></p>
+
+<a href="/?sortBy=lastModified">Sort By Last modified</a>
+<p>We are sorting by <span th:text="${sortBy}"></span></p>
+</body>
+</html>
